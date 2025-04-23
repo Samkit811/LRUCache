@@ -17,10 +17,10 @@ public class DBConnection {
         return instance;
     }
 
-    public long fetchFromDB(Integer key){
+    public Integer fetchFromDB(Integer key){
         System.out.println("Fetching the data from DB for the key: " + key);
-        long currentTimeInMilliSecond = System.currentTimeMillis();
-        System.out.println("DB value: " + currentTimeInMilliSecond + " for the key: " + key);
-        return currentTimeInMilliSecond;
+        int randomNumber = (int) (Math.random() * 100);
+        System.out.println("DB value: " + randomNumber + " for the key: " + key);
+        return randomNumber;
     }
 }
